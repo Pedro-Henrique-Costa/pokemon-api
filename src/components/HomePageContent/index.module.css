@@ -1,0 +1,7 @@
+.section_container{
+
+    background: linear-gradient(rgba(245,219,19,1), rgba(242,184,7,1));
+
+    min-height: calc(100vh - 100px);
+    
+}
