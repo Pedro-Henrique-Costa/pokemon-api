@@ -38,6 +38,16 @@
     color: #212121;
 }
 
+.isHidden {
+    visibility: hidden;
+}
+
+.notHidenn {
+    visibility: visible;
+}
+
+
+
 /* Gera o sublinhado mas sem aredondar
 button:hover {
     text-decoration: underline;
@@ -46,12 +56,72 @@ button:hover {
 }*/
 
 /*BREAKPOINTS*/
+/* Telas de 375 até 450px = CELULARES Menores*/
+@media (min-width: 375px) and (max-width: 450px) {
 
-/* Telas de 375px até 768px = CELULAR*/
-@media (min-width: 375px) {}
+    .header {
+        height: 55px;
+        
+    }
+    .nav {
+        visibility: hidden;
+        gap: 0px;
+    }
+
+    .nav>button{
+        margin: 0px;
+        font-size: 2px;
+        line-height: 2px;
+    }
+
+    .img {
+        height: 22px;
+        width: 58px;
+
+        margin: 0px;
+        margin-left: 26px;
+        margin-top: 22px;
+        margin-bottom: 11px;
+    }
+
+    .notHidenn {
+        order: 3;
+        margin-right: 12px;
+    }
+
+}
+
+/* Telas de 450px até 768px = CELULAR*/
+@media (min-width: 450px) and (max-width: 768px) {
+
+    .header {
+        height: 55px;
+        
+    }
+    .nav {
+        visibility: hidden;
+        gap: 0px;
+    }
+
+    .img {
+        height: 22px;
+        width: 58px;
+
+        margin: 0px;
+        margin-left: 26px;
+        margin-top: 22px;
+        margin-bottom: 11px;
+    }
+
+    .notHidenn {
+        order: 3;
+        margin-right: 12px;
+    }
+
+}
 
 /* Telas de 768px até 1080 = TABLETS*/
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1080px) {
 
     .img {
         margin: 14px;
@@ -65,12 +135,8 @@ button:hover {
     }
 }
 
-/* Telas de 1080px até 1250px = NOTEBOOKS MENORES*/
-@media (min-width: 1080px) {
-
-    .section {
-        gap: 55px;
-    }
+/* Telas de 1080px até 1250px = NOTEBOOKS*/
+@media (min-width: 1081px) and (max-width: 1250px) {
 
     .nav {
         gap: 50px;

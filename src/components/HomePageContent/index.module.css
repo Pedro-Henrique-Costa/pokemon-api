@@ -35,14 +35,122 @@
 
 /*BREAKPOINTS*/
 
-/* Telas de 375px até 768px = CELULAR
-@media (min-width: 375px) {}
-*/
+/* Telas de 375 até 450px = CELULARES Menores*/
+@media (min-width: 375px) and (max-width: 450px) {
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .img {
+        height: 287px;
+        width: 375px;
+    }
+
+    .text_content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .text_content>h1 {
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 49px;
+        letter-spacing: 4px;
+
+        height: 147px;
+        width: 368px;
+        
+        margin: 0px;
+    }
+
+    .text_content>h2 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+
+        height: 84px;
+        width: 322px;
+
+        margin-left: 23px;
+
+    }
+
+    .button {
+        margin-top: 33px;
+        margin-bottom: 33px;
+
+        height: 55px;
+        width: 312px;
+        border-radius: 11px;
+
+        font-size: 23px;
+        line-height: 27px;
+        box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.18);
+    }
+}
+
+/* Telas de 450px até 768px = CELULAR*/
+@media (min-width: 450px) and (max-width: 768px) {
+    
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .img {
+        height: 287px;
+        width: 375px;
+    }
+
+    .text_content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .text_content>h1 {
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 49px;
+        letter-spacing: 4px;
+
+        height: 147px;
+        width: 368px;
+        
+        margin: 0px;
+    }
+
+    .text_content>h2 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+
+        height: 84px;
+        width: 322px;
+
+        margin-left: 23px;
+
+    }
+
+    .button {
+        margin-top: 33px;
+        margin-bottom: 33px;
+
+        height: 55px;
+        width: 312px;
+        border-radius: 11px;
+
+        font-size: 23px;
+        line-height: 27px;
+        box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.18);
+    }
+
+}
 
 /* Telas de 768px até 1080 = TABLETS*/
 @media (min-width: 768px) and (max-width: 1080px) {
-    
-    .container{
+
+    .container {
         flex-direction: column-reverse;
         align-items: center;
     }
@@ -51,7 +159,7 @@
         align-items: center;
         text-align: center;
     }
-    
+
     .img {
         height: 539px;
         width: 706px;
@@ -74,7 +182,7 @@
 
         height: 56px;
         width: 639px;
-        
+
         margin: 0;
         margin-left: 45px;
     }
@@ -95,7 +203,7 @@
 }
 
 /* Telas de 1080px até 1250px = NOTEBOOKS*/
-@media (min-width: 1080px) {
+@media (min-width: 1081px) {
     .img {
         max-height: 587px;
         max-width: 575px;
