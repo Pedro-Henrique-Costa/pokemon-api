@@ -1,5 +1,4 @@
 .header {
-
     background-color: var(--yellow);
     box-shadow: 0px 4px 16px rgba(1, 28, 64, 0.2);
 
@@ -9,53 +8,34 @@
     /*Header em cima do content, para gerar a sombra*/
     position: relative;
     z-index: 10;
-
 }
 
-img {
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img {
     width: 157px;
     height: 63px;
     margin: 14px;
     margin-left: 157px;
 }
 
-nav {
+.nav {
     display: flex;
-    gap: 66px;
-    margin-right: 157px;
 }
 
-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-
-button {
+.button {
     background: none;
     border: none;
 
     font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
-    line-height: 29px;
 
     color: #212121;
-
-}
-
-button:hover:after { 
-    content:""; 
-    float:left; 
-    background:#212121; 
-    width:100%; 
-    height:3px; 
-    border-radius: 3px;
-    
-    position: relative;
-    top: 16px;
 }
 
 /* Gera o sublinhado mas sem aredondar
@@ -64,3 +44,88 @@ button:hover {
     text-underline-offset: 16px;
     text-decoration-thickness: 3px;
 }*/
+
+/*BREAKPOINTS*/
+
+/* Telas de 375px até 768px = CELULAR*/
+@media (min-width: 375px) {}
+
+/* Telas de 768px até 1080 = TABLETS*/
+@media (min-width: 768px) {
+
+    .img {
+        margin: 14px;
+        margin: 20px;
+    }
+
+    .button {
+        font-size: 19px;
+        line-height: 22px;
+        padding: 24px;
+    }
+}
+
+/* Telas de 1080px até 1250px = NOTEBOOKS MENORES*/
+@media (min-width: 1080px) {
+
+    .section {
+        gap: 55px;
+    }
+
+    .nav {
+        gap: 50px;
+        margin-right: 157px;
+    }
+
+    .button {
+        font-size: 25px;
+        line-height: 29px;
+    }
+
+    .button:hover:after {
+        content: "";
+        float: left;
+        background: #212121;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+
+        position: relative;
+        top: 16px;
+    }
+}
+
+/*tela de 1250px ou maior = MONITORES MAIORES*/
+@media (min-width: 1250px) {
+
+    .img {
+        width: 157px;
+        height: 63px;
+        margin: 14px;
+        margin-left: 157px;
+    }
+
+    .nav {
+        gap: 66px;
+        margin-right: 157px;
+    }
+
+    .button {
+        font-size: 25px;
+        line-height: 29px;
+
+    }
+
+    .button:hover:after {
+        content: "";
+        float: left;
+        background: #212121;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+
+        position: relative;
+        top: 16px;
+    }
+
+}

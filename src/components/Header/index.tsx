@@ -6,15 +6,15 @@ const Header = () => {
 
         <header className={styles.header}>
 
-            <section>
+            <section className={styles.section}>
                 
-                <img src={logo} alt="Logo da serie de jogos e anime Pokemon" />
+                <img className={styles.img} src={logo} alt="Logo da serie de jogos e anime Pokemon" />
 
-                <nav>
-                    <button>Home</button>
-                    <button>Pokedex</button>
-                    <button>Legendaries</button>
-                    <button>Documentation</button>
+                <nav className={styles.nav}>
+                    <button className={styles.button}>Home</button>
+                    <button className={styles.button}>Pokedex</button>
+                    <button className={styles.button}>Legendaries</button>
+                    <button className={styles.button}>Documentation</button>
                 </nav>
 
             </section>
