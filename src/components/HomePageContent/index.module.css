@@ -37,6 +37,10 @@
 
 /* Telas de 375 até 450px = CELULARES Menores*/
 @media (min-width: 375px) and (max-width: 450px) {
+    .section_container{
+        padding-bottom: 70px;
+    }
+
     .container {
         flex-direction: column-reverse;
         align-items: center;
@@ -92,7 +96,10 @@
 
 /* Telas de 450px até 768px = CELULAR*/
 @media (min-width: 450px) and (max-width: 768px) {
-    
+    .section_container{
+        padding-bottom: 30px;
+    }
+
     .container {
         flex-direction: column-reverse;
         align-items: center;

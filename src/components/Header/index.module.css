@@ -46,8 +46,6 @@
     visibility: visible;
 }
 
-
-
 /* Gera o sublinhado mas sem aredondar
 button:hover {
     text-decoration: underline;
@@ -58,6 +56,10 @@ button:hover {
 /*BREAKPOINTS*/
 /* Telas de 375 até 450px = CELULARES Menores*/
 @media (min-width: 375px) and (max-width: 450px) {
+    #page-wrap {
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
 
     .header {
         height: 55px;
