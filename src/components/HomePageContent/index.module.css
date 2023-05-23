@@ -38,7 +38,7 @@
 /* Telas de 375 até 450px = CELULARES Menores*/
 @media (min-width: 375px) and (max-width: 450px) {
     .section_container{
-        padding-bottom: 70px;
+        padding-bottom: 0px;
     }
 
     .container {
