@@ -26,7 +26,7 @@ const Header = () => {
     //Fechar quando clicar fora, e quando clicar dentro não
     useEffect(() => {
         const handler = (e: any) => {
-            if(!menuRef.current?.contains(e.target)){
+            if (!menuRef.current?.contains(e.target)) {
                 setMenuMobile(false)
             }
         }
@@ -53,10 +53,23 @@ const Header = () => {
                 {menuMobile && <MenuMobile />}
 
                 <nav className={styles.nav}>
-                    <button className={styles.button}>Home</button>
-                    <button className={styles.button}>Pokedex</button>
-                    <button className={styles.button}>Legendaries</button>
-                    <button className={styles.button}>Documentation</button>
+
+                    <a href="/">
+                        <button className={styles.button}>Home</button>
+                    </a>
+
+                    <a href="pokedex">
+                        <button className={styles.button}>Pokedex</button>
+                    </a>
+
+                    <a href="legendaries">
+                        <button className={styles.button}>Legendaries</button>
+                    </a>
+
+                    <a href="https://pokeapi.co/docs/v2">
+                        <button className={styles.button}>Documentation</button>
+                    </a>
+
                 </nav>
 
             </section>

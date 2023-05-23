@@ -20,7 +20,9 @@ const HomePageContent = () => {
                         <h1 className={styles.text_content_h1}> <b>Find</b> all your favorite <b>Pokemon</b></h1>
                         <h2 className={styles.text_content_h2}>You can know the type of Pokemon, its strengths, disadvantages and abilities</h2>
 
-                        <button className={styles.button}>See Pokemons</button>
+                        <a href="pokedex">
+                            <button className={styles.button}>See Pokemons</button>
+                        </a>
 
                     </article>
 
@@ -33,7 +35,7 @@ const HomePageContent = () => {
                 </main>
 
             </section>
-            
+
             <Footer colorBack=" rgba(242, 184, 7, 1)" />
         </>
     )

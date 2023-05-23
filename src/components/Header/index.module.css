@@ -61,6 +61,10 @@ button:hover {
         padding-top: 10px;
       }
 
+    .section {
+        justify-content: flex-end;
+    }
+
     .header {
         height: 55px;
         
@@ -84,6 +88,7 @@ button:hover {
         margin-left: 26px;
         margin-top: 22px;
         margin-bottom: 11px;
+        margin-right: -40px;
     }
 
     .notHidenn {
