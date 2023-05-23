@@ -1,5 +1,3 @@
-import styles from "./index.module.css"
-
 const PokedexContent = () => {
     return (
         <>
