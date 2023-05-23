@@ -1,0 +1,27 @@
+.container_section {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(242, 184, 7, 1);
+    padding: 50px;
+}
+
+ @media (min-width: 375px) and (max-width: 768px) {
+    .container_section {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+    .p_2 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+    }
+} 
+
+@media (min-width: 768) {
+   .container_section {
+    padding-left: 150px;
+    padding-right: 200px;
+   }
+}
