@@ -1,0 +1,42 @@
+.drop_down {
+    position: absolute;
+    width: 100%;
+
+    background: linear-gradient(180deg, #F5DB13 0%, #F2B807 100%);
+    box-shadow: 4px 4px 24px rgba(1, 17, 38, 0.2);
+    border-radius: 0px 0px 16px 16px;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 350px;
+    margin-bottom: 44px;
+}
+
+.itens {
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 32px;
+    color: #000000;
+    text-shadow: 4px 4px 20px rgba(1, 28, 64, 0.2);
+
+    margin: 16px;
+
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    height: 51px;
+    width: 140px;
+    margin: 32px;
+}
