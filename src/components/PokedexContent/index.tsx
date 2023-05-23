@@ -1,5 +1,4 @@
 import Footer from "../Footer";
-import styles from "./index.module.css"
 
 const PokedexContent = () => {
     return (
