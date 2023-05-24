@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from "react";
 
 //COMPONENTES
 import MenuMobile from "../MenuMobile";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -54,21 +55,29 @@ const Header = () => {
 
                 <nav className={styles.nav}>
 
-                    <a href="/">
-                        <button className={styles.button}>Home</button>
-                    </a>
+                    <button className={styles.button}>
+                        <Link className={styles.text_a} to={`/`}>
+                            Home
+                        </Link>
+                    </button>
 
-                    <a href="pokedex">
-                        <button className={styles.button}>Pokedex</button>
-                    </a>
+                    <button className={styles.button}>
+                        <Link className={styles.text_a} to={`pokedex`}>
+                            Pokedex
+                        </Link>
+                    </button>
 
-                    <a href="legendaries">
-                        <button className={styles.button}>Legendaries</button>
-                    </a>
+                    <button className={styles.button}>
+                        <Link className={styles.text_a} to={`legendaries`}>
+                            Legendaries
+                        </Link>
+                    </button>
 
-                    <a href="https://pokeapi.co/docs/v2">
-                        <button className={styles.button}>Documentation</button>
-                    </a>
+                    <button className={styles.button}>
+                        <a className={styles.text_a} href="https://pokeapi.co/docs/v2">
+                            Documentation
+                        </a>
+                    </button>
 
                 </nav>
 
