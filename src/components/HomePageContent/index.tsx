@@ -4,6 +4,7 @@ import styles from "./index.module.css"
 import design_background from "../../assets/Component 3.svg"
 import pikachu_completo from "../../assets/BannerComplete.svg"
 import Footer from "../Footer";
+import { Link } from "react-router-dom";
 
 const HomePageContent = () => {
 
@@ -20,7 +21,9 @@ const HomePageContent = () => {
                         <h1 className={styles.text_content_h1}> <b>Find</b> all your favorite <b>Pokemon</b></h1>
                         <h2 className={styles.text_content_h2}>You can know the type of Pokemon, its strengths, disadvantages and abilities</h2>
 
-                        <button className={styles.button}>See Pokemons</button>
+                        <Link to={"pokedex"}>
+                            <button className={styles.button}>See Pokemons</button>
+                        </Link>
 
                     </article>
 
@@ -33,7 +36,7 @@ const HomePageContent = () => {
                 </main>
 
             </section>
-            
+
             <Footer colorBack=" rgba(242, 184, 7, 1)" />
         </>
     )
