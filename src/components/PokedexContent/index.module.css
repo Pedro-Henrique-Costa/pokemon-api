@@ -3,7 +3,6 @@
     margin-left: 157px;
     margin-right: 157px;
 
-    background-color: #73D677;
 
     margin-bottom: 10px;
 }
@@ -62,12 +61,12 @@
     height: 500px;
     margin-top: 60px;
 
-    background-color: #6bd112;
+    
 }
 
 .row {
     display: flex;
     flex-direction: row;
 
-    background-color: #a91717;
+    
 }

@@ -6,9 +6,8 @@
     height: 136px;
     width: 351px;
     border-radius: 8px;
-    background-color: rgb(16, 224, 239);
+    background-color:  #F2F2F2;
     margin: 10px;
-    
     display: flex;
     justify-content: space-between;
     flex-direction: row;

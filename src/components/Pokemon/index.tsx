@@ -1,13 +1,12 @@
 import { CircularProgress, CircularProgressLabel, Modal, ModalContent, ModalOverlay, Progress, useDisclosure } from "@chakra-ui/react";
 import styles from "./index.module.css"
 
-import pokemon_img from "../../assets/pokemon.svg"
-
 type PokemonProps = {
-    name?: string
+    name?: string,
+    image?: string
 }
 
-const Pokemon = ({ name }: PokemonProps) => {
+const Pokemon = ({ name, image }: PokemonProps) => {
 
     //Modal
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -25,7 +24,7 @@ const Pokemon = ({ name }: PokemonProps) => {
 
                         <article className={styles.modal_left}>
 
-                            <img src={pokemon_img} alt="Pokemon Charizard" className={styles.modal_img} />
+                            <img src={image} alt="Pokemon Sprite" className={styles.modal_img} />
 
                             <div className={styles.pokemon_type_modal}>
                                 <p className={styles.type_grass}>Grass</p>
@@ -37,7 +36,7 @@ const Pokemon = ({ name }: PokemonProps) => {
                         <article className={styles.modal_right}>
 
                             <div className={styles.modal_row_1}>
-                                <p className={styles.modal_pokemon_name}>Charizard</p>
+                                <p className={styles.modal_pokemon_name}> {name} </p>
                                 <p className={styles.modal_pokemon_generation}>Generation 1</p>
 
                                 <div className={styles.modal_pokemon_number}>
@@ -146,7 +145,7 @@ const Pokemon = ({ name }: PokemonProps) => {
 
                 {/* FOTO POKEMON */}
                 <article className={styles.background_pokemon}>
-                    <img src={pokemon_img} alt="pokemon" />
+                    <img src={image} alt={"pokemon"} />
                 </article>
 
             </div>

@@ -14,6 +14,7 @@ import { AiOutlineDown } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import { api } from "../../configs/api";
 import Pokemon from "../Pokemon";
+import axios from "axios";
 
 const PokedexContent = () => {
 
@@ -21,7 +22,7 @@ const PokedexContent = () => {
     const [numeroPokemons, setNumerosPokemons] = useState<number>(0);
 
     //Pokemos
-    const [pokemons, setPokemons] = useState([]);
+    const [pokemons, setPokemons] = useState([]); 
 
     //Buscar Números de Pokemons
     useEffect(() => {
@@ -34,12 +35,36 @@ const PokedexContent = () => {
 
     //Buscar os 9 primeiros Pokemos
     useEffect(() => {
-        async function getPokemons(numPokemons: number, inicio: number) {
-            const response = await api.get(`https://pokeapi.co/api/v2/pokemon?limit=${numPokemons}&offset=${inicio}`)
-            setPokemons(response.data.results);
+        getPokemons();
+    }, []);
+
+    async function getPokemons(/*numPokemons: number, inicio: number*/) {
+
+        //URL dos 9 primeiros pokemons
+        const endpoints = [];
+        for (let i = 1; i <= 9; i++) {
+            endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
         }
-        getPokemons(9, 0)
-    });
+        axios.all(endpoints.map((endpoint) => api.get(endpoint))).then((res)=> {setPokemons(res)});
+        console.log(pokemons)
+        // const response = await api.get(`https://pokeapi.co/api/v2/pokemon?limit=${numPokemons}&offset=${inicio}`)
+        // setPokemons(response.data.results);
+    }
+
+    //FILTRAR POR NOME
+    const pokemonNameFilter = (name: string) => {
+        const filteredPokemons = [];
+        if(name===""){
+            getPokemons();
+        }
+        for (let i in pokemons){
+            if(pokemons[i].data.name.includes(name)){
+                filteredPokemons.push(pokemons[i]);
+            }
+        }
+        console.log(filteredPokemons);
+        setPokemons(filteredPokemons);
+    }
 
     return (
         <>
@@ -55,7 +80,7 @@ const PokedexContent = () => {
                     </article>
 
                     <article>
-                        <input className={styles.input_decoration} type="text" placeholder="Find your pokemon..." />
+                        <input onChange={(e)=> pokemonNameFilter(e.target.value)} className={styles.input_decoration} type="text" placeholder="Find your pokemon..." />
                     </article>
 
                 </section>
@@ -91,10 +116,9 @@ const PokedexContent = () => {
                 <section className={styles.container_pokemons}>
 
                     {/* LINHA 1 */}
-
                     {pokemons.map((pokemon: any, key) => (
-                        <article className={styles.row}>
-                            <Pokemon key={key} name={pokemon.name} />
+                        <article className={styles.row} key={key}>
+                            <Pokemon name={pokemon.data.name} image={pokemon.data.sprites.front_default}/>
                         </article>
                     ))}
 
@@ -110,8 +134,8 @@ export default PokedexContent;
 
 
  // CARD
-    //Buscar Nome Pokemon
-    //Buscar Imagem Pokemon
+    // [x] Buscar Nome Pokemon 
+    // [x] Buscar Imagem Pokemon
     //Buscar Attack Pokemon (numero)
     //Buscar Defense Pokemon (numero)
     //Buscar o Tipo do Pokemon
@@ -128,7 +152,7 @@ export default PokedexContent;
     //RESTANTE
     //Fazer reload ao scrollar para baixo
     //Fazer filtragem por tipos
-    //Fazer filtragem por nomes
+    // [x] Fazer filtragem por nomes
 
     //FINALIZAÇÕES
     //Responsividade na Pokedex
