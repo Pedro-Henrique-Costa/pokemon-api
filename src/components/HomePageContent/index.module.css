@@ -136,6 +136,7 @@
         width: 322px;
 
         margin-left: 23px;
+        margin-top: 20px;
 
     }
 
@@ -192,6 +193,9 @@
 
         margin: 0;
         margin-left: 45px;
+
+        margin-top: 20px;
+        
     }
 
     .button {
@@ -228,17 +232,23 @@
     .text_content {
         height: 557px;
         width: 516px;
+
+        margin-top: 30px;
     }
 
     .text_content>h1 {
         font-size: 72px;
         line-height: 84px;
         letter-spacing: 4px;
+
+        margin-top: 30px;
     }
 
     .text_content>h2 {
         font-size: 32px;
         line-height: 37px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .container {
@@ -267,17 +277,22 @@
     .text_content {
         height: 557px;
         width: 516px;
+        margin-top: 30px;
     }
 
     .text_content>h1 {
         font-size: 72px;
         line-height: 84px;
         letter-spacing: 4px;
+        margin-top: 30px;
+
     }
 
     .text_content>h2 {
         font-size: 32px;
         line-height: 37px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .container {

@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from "react";
 
 //COMPONENTES
 import MenuMobile from "../MenuMobile";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -26,7 +27,7 @@ const Header = () => {
     //Fechar quando clicar fora, e quando clicar dentro não
     useEffect(() => {
         const handler = (e: any) => {
-            if(!menuRef.current?.contains(e.target)){
+            if (!menuRef.current?.contains(e.target)) {
                 setMenuMobile(false)
             }
         }
@@ -53,10 +54,31 @@ const Header = () => {
                 {menuMobile && <MenuMobile />}
 
                 <nav className={styles.nav}>
-                    <button className={styles.button}>Home</button>
-                    <button className={styles.button}>Pokedex</button>
-                    <button className={styles.button}>Legendaries</button>
-                    <button className={styles.button}>Documentation</button>
+
+                    <button className={styles.button}>
+                        <Link className={styles.text_a} to={`/`}>
+                            Home
+                        </Link>
+                    </button>
+
+                    <button className={styles.button}>
+                        <Link className={styles.text_a} to={`pokedex`}>
+                            Pokedex
+                        </Link>
+                    </button>
+
+                    <button className={styles.button}>
+                        <Link className={styles.text_a} to={`legendaries`}>
+                            Legendaries
+                        </Link>
+                    </button>
+
+                    <button className={styles.button}>
+                        <a className={styles.text_a} href="https://pokeapi.co/docs/v2">
+                            Documentation
+                        </a>
+                    </button>
+
                 </nav>
 
             </section>
