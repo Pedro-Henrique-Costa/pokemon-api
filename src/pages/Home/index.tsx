@@ -1,4 +1,4 @@
-import HomePageContent from "../../src/components/HomePageContent"
+import HomePageContent from "../../components/HomePageContent/index"
 
 function Home() {
 

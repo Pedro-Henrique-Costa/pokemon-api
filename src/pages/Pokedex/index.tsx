@@ -1,4 +1,4 @@
-import PokedexContent from "../../src/components/PokedexContent/index"
+import PokedexContent from "../../components/PokedexContent/index"
 
 const Pokedex = () => {
     return (
