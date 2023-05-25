@@ -1,6 +1,6 @@
 import styles from "./index.module.css"
 
-import Footer from "../Footer";
+//import Footer from "../Footer";
 
 import {
     Button,
@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 
 import { AiOutlineDown } from "react-icons/ai";
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import { api } from "../../configs/api";
 import Pokemon from "../Pokemon";
 import axios from "axios";
@@ -53,7 +53,7 @@ const PokedexContent = () => {
 
     //FILTRAR POR NOME
     const pokemonNameFilter = (name: string) => {
-        const filteredPokemons = [];
+        const filteredPokemons: SetStateAction<never[]> = [];
         if(name===""){
             getPokemons();
         }
@@ -118,14 +118,14 @@ const PokedexContent = () => {
                     {/* LINHA 1 */}
                     {pokemons.map((pokemon: any, key) => (
                         <article className={styles.row} key={key}>
-                            <Pokemon name={pokemon.data.name} image={pokemon.data.sprites.front_default}/>
+                            <Pokemon name={pokemon.data.name} image={pokemon.data.sprites.front_default}  types={pokemon.data.types}/>
                         </article>
                     ))}
 
                 </section>
 
             </main>
-            <Footer colorBack=" rgb(255, 255, 255)" />
+            {/* <Footer colorBack=" rgb(255, 255, 255)" /> */}
         </>
     )
 }

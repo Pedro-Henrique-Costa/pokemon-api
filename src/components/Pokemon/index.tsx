@@ -3,13 +3,27 @@ import styles from "./index.module.css"
 
 type PokemonProps = {
     name?: string,
-    image?: string
+    image?: string,
+    types?: any
 }
 
-const Pokemon = ({ name, image }: PokemonProps) => {
+const Pokemon = ({ name, image, types }: PokemonProps) => {
 
     //Modal
     const { isOpen, onOpen, onClose } = useDisclosure()
+
+    //Verificando se há mais de um tipo para o pokemon
+    const typeHandler = () => {
+        if (types[1]) {
+            return (
+                <>
+                    <p className={styles.type_poison}>{types[0].type.name}</p>
+                    <p className={styles.type_poison}>{types[1].type.name}</p>
+                </>
+            );
+        }
+        return <p className={styles.type_poison}>{types[0].type.name}</p>;
+    };
 
     return (
         <>
@@ -138,8 +152,7 @@ const Pokemon = ({ name, image }: PokemonProps) => {
                         </div>
                     </div>
                     <div className={styles.pokemon_type}>
-                        <p className={styles.type_grass}>Grass</p>
-                        <p className={styles.type_poison}>Poison</p>
+                        {typeHandler()}
                     </div>
                 </article>
 
