@@ -27,6 +27,6 @@ Um dos grandes destaques desse projeto fica para a implementação da aplicaçã
 
 # Links 
 
-PokeAPI: https://pokeapi.co/
-Figma: https://www.figma.com/file/KJXUpKLlQaTb98t9NDQ82P/Pokedex-(Community)?type=design&node-id=2-3&t=5cwqOImIA82G3Ajv-0
-Netlify: https://gregarious-selkie-5ab395.netlify.app/
+- PokeAPI: https://pokeapi.co/
+- Figma: https://www.figma.com/file/KJXUpKLlQaTb98t9NDQ82P/Pokedex-(Community)?type=design&node-id=2-3&t=5cwqOImIA82G3Ajv-0
+- Netlify: https://gregarious-selkie-5ab395.netlify.app/
