@@ -11,12 +11,9 @@ import {
     MenuList,
     MenuOptionGroup,
     Modal,
-    ModalBody,
-    ModalCloseButton,
     ModalContent,
-    ModalFooter,
-    ModalHeader,
     ModalOverlay,
+    Progress,
     useDisclosure
 } from "@chakra-ui/react";
 
@@ -29,7 +26,7 @@ const PokedexContent = () => {
 
     return (
         <>
-            <Modal isOpen={isOpen} onClose={onClose}>
+            <Modal isOpen={isOpen} onClose={onClose} size={'xl'} >
 
                 <ModalOverlay />
 
@@ -39,7 +36,7 @@ const PokedexContent = () => {
 
                         <article className={styles.modal_left}>
 
-                            <img src={pokemon_img} alt="Pokemon Charizard" className={styles.modal_img}/>
+                            <img src={pokemon_img} alt="Pokemon Charizard" className={styles.modal_img} />
 
                             <div className={styles.pokemon_type_modal}>
                                 <p className={styles.type_grass}>Grass</p>
@@ -50,17 +47,76 @@ const PokedexContent = () => {
 
                         <article className={styles.modal_right}>
 
-                            <div className={styles.modal_header}>
+                            <div className={styles.modal_row_1}>
                                 <p className={styles.modal_pokemon_name}>Charizard</p>
                                 <p className={styles.modal_pokemon_generation}>Generation 1</p>
-                                <p className={styles.modal_pokemon_number}>578</p>
+
+                                <div className={styles.modal_pokemon_number}>
+                                    <p className={styles.value_pokemon_number}>578</p>
+                                </div>
                             </div>
 
-                            <div>
+                            <div className={styles.modal_row_2}>
+                                <div className={styles.background_abilities}>
+                                    <p>Abilities</p>
+                                    <p>Overgrow - Chlorophyll</p>
+                                </div>
+                            </div>
+
+                            <div className={styles.modal_row_3}>
+
+                                <div className={styles.element_row_3a}>
+                                    <p className={styles.element_row_p}>Health Points</p>
+                                    <p className={styles.element_row_n}>1 000 000</p>
+
+                                    <Progress colorScheme='green' value={100} size='xs' />
+
+                                </div>
+
+                                <div className={styles.element_row_3b}>
+                                    <p className={styles.element_row_p}>Experience</p>
+                                    <p className={styles.element_row_n}>1 000 000</p>
+
+                                    <Progress colorScheme='yellow' value={100} size='xs' />
+                                </div>
 
                             </div>
-                            <div></div>
-                            <div></div>
+
+                            <div className={styles.modal_row_4}>
+
+                                <div className={styles.background_powers}>
+
+                                    <div className={styles.div_element_row4}>
+                                        <CircularProgress value={100} color='black' thickness='8px' size={"40px"}>
+                                            <CircularProgressLabel>419</CircularProgressLabel>
+                                        </CircularProgress>
+                                        <p className={styles.element_row4_p}>Defense</p>
+                                    </div>
+
+                                    <div className={styles.div_element_row4}>
+                                        <CircularProgress value={100} color='black' thickness='8px' size={"40px"}>
+                                            <CircularProgressLabel>419</CircularProgressLabel>
+                                        </CircularProgress>
+                                        <p className={styles.element_row4_p}>Attack</p>
+                                    </div>
+
+                                    <div className={styles.div_element_row4}>
+                                        <CircularProgress value={100} color='black' thickness='8px' size={"40px"}>
+                                            <CircularProgressLabel>419</CircularProgressLabel>
+                                        </CircularProgress>
+                                        <p className={styles.element_row4_p}>Sp Attack</p>
+                                    </div>
+
+                                    <div className={styles.div_element_row4}>
+                                        <CircularProgress value={100} color='black' thickness='8px' size={"40px"}>
+                                            <CircularProgressLabel>419</CircularProgressLabel>
+                                        </CircularProgress>
+                                        <p className={styles.element_row4_p}>Sp Defence</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </article>
 

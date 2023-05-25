@@ -59,7 +59,7 @@
     align-items: center;
     flex-direction: column;
     height: 500px;
-    background-color: green;
+    background-color: #FDFDFD;
 
     margin-top: 60px;
 }
@@ -67,7 +67,7 @@
 .row {
     display: flex;
     flex-direction: row;
-    background-color: rgb(22, 76, 143);
+    background-color: #FDFDFD;
 
     gap: 34px;
 }
@@ -76,7 +76,7 @@
     height: 136px;
     width: 351px;
     border-radius: 8px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(234, 231, 231);
 
     margin: 10px;
 
@@ -192,26 +192,144 @@
     background: linear-gradient(#D93E30, #B23327);
 }
 
+.modal_img {
+    height: 370px;
+    width: 264px;
+}
+
 .modal_right {
     background: linear-gradient(180deg, #732119 42.19%, #D93E30 100%);
 
+    padding-left: 30px;
+    padding-right: 30px;
+
+    width: 350px;
+
 }
 
-.modal_img {
-    height: 370px;
-    width: 364px;
-}
-
-.modal_header {
+.modal_row_1 {
     display: flex;
     flex-direction: row;
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+}
+
+.modal_row_2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+    background-color: #FDFDFD;
+    box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+    border-radius: 8px;
+
+    margin-top: 10px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+
+}
+
+.background_abilities {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+}
+
+.modal_row_3 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    background-color: #FDFDFD;
+    box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+    border-radius: 8px;
+
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.element_row_3a {
+    margin-left: 5px;
+}
+
+.element_row_p{
+    margin-top: 2px;
+
+    font-weight: 400;
+    font-size: 14.5px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.element_row_n{
+    margin-top: 2px;
+    
+    font-weight: 600;
+    font-size: 14.5px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.element_row_3b {
+    margin-right: 5px;
+}
+
+.modal_row_4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.background_powers {
+    
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 23px;
+    padding-bottom: 20px;
+}
+
+.element_row4_p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #4B4B4B;
+    border-radius: 3px;
+
+    background-color: #ffffff;
+
+    text-align: center;
+    justify-content: center;
+}
+
+.div_element_row4{
+    background: #FDFDFD;
+    box-shadow: 4px 4px 24px rgba(1, 17, 38, 0.2);
+    border-radius: 3px;
+
+    justify-content: center;
+    text-align: center;
+
+    margin-top: 10px;
+    padding: 4px;
 }
 
 .modal_pokemon_name {
-    padding: 25px;
-
     font-weight: 700;
-    font-size: 16px;
+    font-size: 26px;
     line-height: 32px;
 
     color: #FDFDFD;
@@ -220,9 +338,26 @@
 
 .modal_pokemon_generation {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 30px;
     text-align: center;
-
     color: #FDFDFD;
+
+}
+
+.modal_pokemon_number {
+    background-color: #F2CB07;
+    border-radius: 50%;
+
+    height: 33px;
+    width: 33px;
+
+    text-align: center;
+    font-size: 15px;
+
+}
+
+.value_pokemon_number {
+    margin-top: 4px;
+    margin-right: 2px;
 }
