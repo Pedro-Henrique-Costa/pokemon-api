@@ -1,0 +1,56 @@
+.background_legendaries {
+    background-color: rgb(33, 33, 33);
+    display: flex;
+
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.size_main {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.title_legend {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 84px;
+    letter-spacing: 4px;
+
+    color: #FFFFFF;
+}
+
+.text_legendh2 {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 84px;
+    letter-spacing: 4px;
+
+    color: #FDFDFD;
+}
+
+.text_legendp {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #FFFFFF;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container_text {
+    display: flex;
+    flex-direction: column;
+}
