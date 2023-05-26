@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import styles from "./index.module.css"
 
 //import Footer from "../Footer";
@@ -11,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 
 import { AiOutlineDown } from "react-icons/ai";
-import { SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { api } from "../../configs/api";
 import Pokemon from "../Pokemon";
 import axios from "axios";
@@ -45,26 +46,34 @@ const PokedexContent = () => {
         for (let i = 1; i <= 9; i++) {
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
         }
-        axios.all(endpoints.map((endpoint) => api.get(endpoint))).then((res)=> {setPokemons(res)});
+        axios.all(endpoints.map((endpoint) => api.get(endpoint))).then((res:any)=> {setPokemons(res)});
         console.log(pokemons)
         // const response = await api.get(`https://pokeapi.co/api/v2/pokemon?limit=${numPokemons}&offset=${inicio}`)
         // setPokemons(response.data.results);
     }
 
+    // type pokemonProp = {
+    //     name?: string,
+    //     data?: string[],
+    // }
+
     //FILTRAR POR NOME
-    const pokemonNameFilter = (name: string) => {
-        const filteredPokemons: SetStateAction<never[]> = [];
-        if(name===""){
-            getPokemons();
-        }
-        for (let i in pokemons){
-            if(pokemons[i].data.name.includes(name)){
-                filteredPokemons.push(pokemons[i]);
-            }
-        }
-        console.log(filteredPokemons);
-        setPokemons(filteredPokemons);
-    }
+    // const pokemonNameFilter = (name: string) => {
+    //     const filteredPokemons: SetStateAction<any[] | any> = [];
+    //     if(name===""){
+    //         getPokemons();
+    //     }
+        
+    //     for (let i in pokemons as pokemonProp){
+    //         if(pokemons[i].data.name.includes(name)){
+    //             filteredPokemons.push(pokemons[i]);
+    //         }
+    //     }
+    //     console.log(filteredPokemons);
+    //     setPokemons(filteredPokemons);
+    // }
+
+    //onChange={(e)=> pokemonNameFilter(e.target.value)}
 
     return (
         <>
@@ -80,7 +89,7 @@ const PokedexContent = () => {
                     </article>
 
                     <article>
-                        <input onChange={(e)=> pokemonNameFilter(e.target.value)} className={styles.input_decoration} type="text" placeholder="Find your pokemon..." />
+                        <input  className={styles.input_decoration} type="text" placeholder="Find your pokemon..." />
                     </article>
 
                 </section>

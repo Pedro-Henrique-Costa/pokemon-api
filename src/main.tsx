@@ -5,10 +5,11 @@ import './global.css'
 //CONFIG ROUTER
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Home from "../pages/Home/index";
-import Pokedex from "../pages/Pokedex/index"
+import Home from "./pages/Home/index";
+import Pokedex from "./pages/Pokedex/index"
 import App from './App';
 import ErrorPage from './components/ErrorPage';
+import Legendaries from './pages/Legendaries';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/pokedex",
         element: <Pokedex/>
+      },
+      {
+        path: "/legendaries",
+        element: <Legendaries/>
       }
     ]
   }
